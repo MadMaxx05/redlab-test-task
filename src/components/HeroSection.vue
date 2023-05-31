@@ -3,10 +3,10 @@
 <template>
   <section class="hero">
     <div class="hero__wrapper">
-      <div class="hero__image"></div>
+      <div class="hero__image animate"></div>
       <div class="hero__text">
-        <h1>Доставка готової їжі в Києві</h1>
-        <p>
+        <h1 class="animate">Доставка готової їжі в Києві</h1>
+        <p style="transition-delay: 0.15s" class="animate">
           Ми пропонуємо доставку їжі прямо до ваших дверей. Насолоджуйтесь смачними стравами без
           необхідності готувати самостійно.
         </p>

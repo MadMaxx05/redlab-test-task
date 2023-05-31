@@ -7,10 +7,6 @@ defineProps({
 <template>
   <div class="mobile-navigation" :class="{ 'menu-open': isMenuOpen }">
     <div>
-      <div class="header__switch">
-        <a class="active" href="#">Доставка</a>
-        <a href="#">Самовивіз</a>
-      </div>
       <nav>
         <ul>
           <li>
@@ -44,6 +40,7 @@ defineProps({
   width: 100%;
   height: 100%;
   pointer-events: none;
+  z-index: 5;
   transition: all 300ms ease;
 }
 
@@ -89,39 +86,6 @@ defineProps({
 .mobile-navigation.menu-open::after {
   opacity: 1;
   pointer-events: auto;
-}
-
-.header__switch {
-  position: absolute;
-  top: 16px;
-  left: 20px;
-  display: flex;
-  gap: 3px;
-  padding: 3px;
-  background-color: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 50px;
-}
-
-.header__switch a {
-  display: inline-block;
-  padding: 8px 12px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 15.4px;
-  color: #636c81;
-  transition: color 300ms;
-}
-
-.header__switch a.active {
-  border-radius: 50px;
-  background-color: #5a30f0;
-  color: white;
-}
-
-.header__switch a:not(.active):hover {
-  color: #5a30f0;
 }
 
 .mobile-navigation ul {

@@ -3,7 +3,7 @@
 <template>
   <section class="features">
     <div class="features__container">
-      <div class="features__item">
+      <div style="transition-delay: 0s" class="features__item animate">
         <h3>Висока якість продукції</h3>
         <div>
           <img src="../assets/images/check.svg" alt="Check" />
@@ -13,7 +13,7 @@
           строгий контроль якості, щоб забезпечити вам найкращий смаковий досвід.
         </div>
       </div>
-      <div class="features__item">
+      <div style="transition-delay: 0.15s" class="features__item animate">
         <h3>Різноманітність страв</h3>
         <div>
           <img src="../assets/images/bowl.svg" alt="Bowl" />
@@ -23,7 +23,7 @@
           строгий контроль якості, щоб забезпечити вам найкращий смаковий досвід.
         </div>
       </div>
-      <div class="features__item">
+      <div style="transition-delay: 0.3s" class="features__item animate">
         <h3>Швидка доставка</h3>
         <div>
           <img src="../assets/images/rocket.svg" alt="Rocket" />
@@ -33,7 +33,7 @@
           строгий контроль якості, щоб забезпечити вам найкращий смаковий досвід.
         </div>
       </div>
-      <div class="features__item">
+      <div style="transition-delay: 0.45s" class="features__item animate">
         <h3>Працюємо цілодобово</h3>
         <div>
           <img src="../assets/images/clock.svg" alt="Clock" />

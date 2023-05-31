@@ -34,8 +34,15 @@ onUnmounted(() => {
           </a>
         </div>
         <div class="header__switch">
-          <a class="active" href="#">Доставка</a>
-          <a href="#">Самовивіз</a>
+          <div class="header__switch__wrapper">
+            <input type="radio" name="tab" id="delivery" checked />
+            <input type="radio" name="tab" id="self-delivery" />
+            <label for="delivery" class="delivery"><a href="#delivery">Доставка</a></label>
+            <label for="self-delivery" class="self-delivery"
+              ><a href="#self-delivery">Самовивіз</a></label
+            >
+            <div class="tab"></div>
+          </div>
         </div>
       </div>
       <nav class="header-menu">
@@ -98,6 +105,7 @@ header.scrolled {
 }
 
 .header__switch {
+  position: relative;
   display: none;
   gap: 3px;
   padding: 3px;
@@ -106,7 +114,20 @@ header.scrolled {
   border-radius: 50px;
 }
 
+.header__switch .tab {
+  transition: all 300ms ease;
+}
+
+.header__switch label {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
 .header__switch a {
+  position: relative;
   display: inline-block;
   padding: 8px 12px;
   text-decoration: none;
@@ -114,17 +135,38 @@ header.scrolled {
   font-weight: 600;
   line-height: 15.4px;
   color: #636c81;
+  z-index: -1;
   transition: color 300ms;
 }
 
-.header__switch a.active {
+.header__switch input {
+  display: none;
+}
+
+.header__switch .tab {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50%;
+  height: calc(100% - 6px);
   border-radius: 50px;
   background-color: #5a30f0;
   color: white;
 }
 
-.header__switch a:not(.active):hover {
-  color: #5a30f0;
+.header__switch #delivery:checked ~ label.delivery a,
+.header__switch #self-delivery:checked ~ label.self-delivery a {
+  color: white;
+}
+
+.header__switch #delivery:checked ~ .tab {
+  width: calc(50% - 6px);
+  transform: translateX(3px) translateY(-50%);
+}
+
+.header__switch #self-delivery:checked ~ .tab {
+  width: 50%;
+  transform: translateX(calc(100% - 3px)) translateY(-50%);
 }
 
 .header-menu {
