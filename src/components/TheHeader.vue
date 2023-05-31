@@ -25,7 +25,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <header :class="{ scrolled: scrollPosition > 0 }">
+  <header class="header" :class="{ scrolled: scrollPosition > 100 }">
     <div class="header__wrapper">
       <div class="header__logo">
         <div>
@@ -78,7 +78,7 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-header {
+.header {
   position: fixed;
   top: 0;
   z-index: 50;
@@ -86,7 +86,7 @@ header {
   transition: all 300ms;
 }
 
-header.scrolled {
+.header.scrolled {
   background-color: white;
   box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.07);
 }

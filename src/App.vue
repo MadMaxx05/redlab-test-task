@@ -1,9 +1,10 @@
 <script setup>
 import { onMounted } from 'vue'
 
-import TheNavbar from './components/TheNavbar.vue'
+import TheHeader from './components/TheHeader.vue'
 import HeroSection from './components/HeroSection.vue'
 import FeaturesSection from './components/FeaturesSection.vue'
+import CallToAction from './components/CallToAction.vue'
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
@@ -22,9 +23,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <TheNavbar />
+  <TheHeader />
   <HeroSection />
   <FeaturesSection />
+  <CallToAction />
 </template>
 
 <style>
