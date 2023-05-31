@@ -93,6 +93,24 @@ onMounted(() => {
     font-size: 18px;
   }
 
+  .magnetic-btn:hover::after {
+    transform: scale(1.8);
+  }
+
+  .magnetic-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.2;
+    z-index: -1;
+    transform: scale(0.7);
+    transition: transform 500ms ease;
+  }
+
   .magnetic-btn__inner {
     bottom: 15px;
     right: 50%;
